@@ -1,3 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-netflix-red text-white rounded-full hover:bg-red-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors;
+  }
+
+  .movie-card {
+    @apply relative group cursor-pointer transform transition-transform duration-300 hover:scale-105;
+  }
+
+  .movie-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+}
+
 :root {
   --color-primary: #6741d9;
   --color-primary-light: #7950f2;
